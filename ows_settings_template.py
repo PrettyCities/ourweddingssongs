@@ -7,8 +7,8 @@ AWS_DYNAMO_REGION = "us-east-1" # Or any other region
 AWS_DYNAMO_TABLE = "tablename"
 
 # Spotify
-SPOTIFY_CLIENT_ID = os.environ.get("spotify_client_id")
-SPOTIFY_CLIENT_SECRET = os.environ.get("spotify_client_secret")
+SPOTIFY_CLIENT_ID = os.environ.get("SPOTIFY_CLIENT_ID")
+SPOTIFY_CLIENT_SECRET = os.environ.get("SPOTIFY_CLIENT_SECRET")
 
 # Templating
 WEBSITE_DIRECTORY = Path("/path/to/ourweddingssongs/website")
