@@ -1,5 +1,3 @@
-import os
-
 import falcon
 from falcon.response import Response
 from falcon.request import Request
