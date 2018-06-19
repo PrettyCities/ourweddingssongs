@@ -1,0 +1,8 @@
+.python-version
+.idea
+*.pyc
+ows_settings.py
+
+website/index.html
+websitemaker/utils/bulk_loader.py
+websitemaker/resources

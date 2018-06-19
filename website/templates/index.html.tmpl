@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<title>ZolfoCyze Wedding 2019 Songs</title>
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107518363-5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-107518363-5');
+</script>
+
+</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="resources/css/fading.css">
+<style>
+body,h1,h2{font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+p {line-height: 2}
+.bgimg, .bgimg2 {
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+</style>
+<body>
+
+<!-- Header / Home-->
+<header class="w3-display-container w3-wide bgimg w3-grayscale-min" id="home">
+  <div class="w3-display-middle w3-text-pink w3-center">
+    <h1 class="w3-jumbo fade-first">Our Wedding's Songs</h1>
+    <h2 class="fade-second"><b>September 14, 2019</b></h2>
+  </div>
+</header>
+
+<!-- Navbar (sticky bottom) -->
+<div class="w3-bottom w3-hide-small">
+  <div class="w3-bar w3-white w3-center w3-padding w3-opacity-min w3-hover-opacity-off">
+    <a href="#home" style="width:25%" class="w3-bar-item w3-button">Home</a>
+    <a href="#cocktail" style="width:25%" class="w3-bar-item w3-button">Cocktail</a>
+    <a href="#dinner" style="width:25%" class="w3-bar-item w3-button">Dinner</a>
+    <a href="#party" style="width:25%" class="w3-bar-item w3-button w3-hover-black">Party</a>
+  </div>
+</div>
+
+<!-- Cocktail -->
+<div class="w3-container w3-padding-64 w3-pale-red w3-center w3-wide" id="cocktail">
+  <div class="w3-content">
+    <h1 class="w3-center w3-text-grey"><b>Cocktail</b></h1>
+      {% for cocktail_song in cocktail_songs %}
+        <p>
+            {{ cocktail_song.render() }}
+        </p>
+      {% endfor %}
+  </div>
+</div>
+
+<!-- Dinner-->
+<div class="w3-container w3-padding-64 w3-pale-red w3-grayscale-min w3-center" id="dinner">
+  <div class="w3-content">
+    <h1 class="w3-text-grey"><b>Dinner</b></h1>
+    <div class="w3-row">
+      {% for dinner_song in dinner_songs %}
+        <p>
+            {{ dinner_song.render() }}
+        </p>
+    {% endfor %}
+    </div>
+  </div>
+</div>
+
+<!-- Party -->
+<div class="w3-container w3-padding-64 w3-pale-red w3-center w3-wide" id="party">
+  <h1>Party</h1>
+  <div class="w3-row">
+      {% for party_song in party_songs %}
+        <p>
+            {{ party_song.render() }}
+        </p>
+      {% endfor %}
+  </div>
+</div>
+<div class="w3-hide-small" style="margin-bottom:32px"> </div>
+
+</body>
+</html>
